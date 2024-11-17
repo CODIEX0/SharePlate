@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="@color/background_color"
+    tools:context=".fragments.AdviceFragment"
+    android:weightSum="10">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/fact_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:src="@mipmap/mealplanning"
+        app:strokeColor="@color/text_color"
+        app:strokeWidth="10dp"
+        tools:visibility="visible"/>
+
+
+    <TextView
+        android:id="@+id/fact_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:background="@color/background_color"
+        android:textStyle="bold"
+        android:text="Practice meal planning to minimize food waste and ensure balanced nutrition."
+        android:textSize="18sp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="5"
+        >
+
+        <Button
+            android:id="@+id/btnDonations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:backgroundTint="@color/button_color"
+            android:drawableEnd="@android:drawable/ic_menu_send"
+            android:gravity="center"
+            android:text="Donations"
+            android:textSize="20dp"
+            android:textColor="@color/background_color"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.072" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/btnShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/button_color"
+                android:drawableEnd="@drawable/baseline_share_24"
+                android:text="Share"
+                android:textColor="@color/background_color"
+                android:textSize="20dp"
+                app:cornerRadius="20dp" />
+
+            <Button
+                android:id="@+id/btn_next_Advice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:backgroundTint="@color/button_color"
+                android:drawableEnd="@drawable/baseline_next_plan_24"
+                android:gravity="right"
+                android:text="Next Fact"
+                android:textColor="@color/background_color"
+                android:textSize="20dp"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.broker.UpdateUsersFragment"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    android:weightSum="2">
+
+    <View
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/sf_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="4dp"
+        android:text="Add a request"
+        android:textStyle="bold"
+        android:textColor="@color/background_color"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_view"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_view"
+        app:layout_constraintHorizontal_bias="0.607"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:src="@mipmap/request"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/bottom_view"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_view"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:fontFamily="sans-serif-condensed-light"
+            android:gravity="top|center_horizontal"
+            android:text="New Request"
+            android:textSize="35dp"
+            android:textColor="@color/text_color"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.80"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="Description"
+                android:textColor="@color/text_color"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtfoodName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="Item Name: "
+                android:textColor="@color/text_color"
+                android:textSize="15sp"
+                android:textStyle="italic"/>
+
+            <TextView
+                android:id="@+id/txtmeatType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="Meal Type: "
+                android:textColor="@color/text_color"
+                android:textSize="15sp"
+                android:textStyle="italic"/>
+
+            <TextView
+                android:id="@+id/txtAllergens"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="Allergens: "
+                android:textColor="@color/text_color"
+                android:textSize="15sp"
+                android:textStyle="italic"/>
+            <TextView
+                android:id="@+id/txtQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="Quantity: "
+                android:textColor="@color/text_color"
+                android:textSize="15sp"
+                android:textStyle="italic"/>
+            <TextView
+                android:id="@+id/txtTimePosted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="Time Posted: "
+                android:textColor="@color/text_color"
+                android:textSize="15sp"
+                android:textStyle="italic"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_vview"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="5dp"
+                    android:background="#00FFFFFF"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="fill_vertical"
+                    android:hint="Quantity"
+                    android:inputType="number"
+                    android:padding="15dp"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="#5E000000"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!-- Display Selected Date and Time -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtPickupDateTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Pickup Date and Time"
+                    android:textColor="@color/text_color"
+                    android:layout_marginTop="8dp"/>
+
+                <Button
+                    android:id="@+id/btnSelectPickupDateTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/text_color"
+                    android:drawableLeft="@android:drawable/ic_menu_day"
+                    android:text="Select Pickup Date" />
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/btnRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="@color/text_color"
+                android:drawableLeft="@android:drawable/ic_input_add"
+                android:text="Request"
+                android:textColor="@color/white"
+                android:textSize="19dp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

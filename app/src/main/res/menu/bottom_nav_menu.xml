@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_donations"
+        android:title="Donations"
+        android:icon="@mipmap/food"
+        android:fontFamily="sans-serif-condensed-light" />
+    <item
+        android:id="@+id/nav_advice"
+        android:icon="@mipmap/idea"
+        android:fontFamily="sans-serif-condensed-light"
+        android:title="Ideas"/>
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@mipmap/home"
+        android:fontFamily="sans-serif-condensed-light" />
+    <item
+        android:id="@+id/nav_directions"
+        android:icon="@android:drawable/ic_dialog_map"
+        android:fontFamily="sans-serif-condensed-light"
+        android:title="Directions"/>
+    <item
+        android:id="@+id/nav_profile"
+        android:title="Profile"
+        android:icon="@mipmap/profile"
+        android:fontFamily="sans-serif-condensed-light" />
+</menu>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="circular">
+        <item name="cornerSize">30%</item>
+    </style>
+
+    <style name="CustomSearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:editTextColor">@color/text_color</item>
+    </style>
+
+</resources>

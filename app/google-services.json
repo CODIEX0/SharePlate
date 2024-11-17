@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1089768538155",
+    "project_id": "shareplate-63cad",
+    "storage_bucket": "shareplate-63cad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089768538155:android:4cf9b559761fd004262a6e",
+        "android_client_info": {
+          "package_name": "com.example.shareplate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAx1f0k9Af9NQrKSTGykBRjSLEh5lkJ_RA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

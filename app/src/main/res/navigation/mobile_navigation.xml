@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_map">
+
+    <fragment
+        android:id="@+id/navigation_donation"
+        android:name="com.example.shareplate.fragments.DonationFragment"
+        android:label="Donations"
+        tools:layout="@layout/fragment_donation">
+        <action
+            android:id="@+id/action_navigation_donation_to_navigation_add_request"
+            app:destination="@id/navigation_add_request">
+            <argument
+                android:name="foodItem"
+                app:argType="com.example.shareplate.data.FoodItem" />
+        </action>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_add_request"
+        android:name="com.example.shareplate.fragments.donee.AddRequestFragment"
+        android:label="Add Request"
+        tools:layout="@layout/fragment_add_request" />
+
+    <action
+        android:id="@+id/action_donationFragment_to_addRequestFragment"
+        app:destination="@id/navigation_add_request">
+        <argument
+            android:name="foodItem"
+            app:argType="com.example.shareplate.data.FoodItem" />
+    </action>
+
+
+    <fragment
+        android:id="@+id/navigation_request"
+        android:name="com.example.shareplate.fragments.donor.RequestFragment"
+        android:label="Request"
+        tools:layout="@layout/fragment_request" >
+        <action
+            android:id="@+id/action_navigation_request_to_navigation_donation"
+            app:destination="@id/navigation_donation" />
+        <action
+            android:id="@+id/action_navigation_request_to_navigation_add_request"
+            app:destination="@id/navigation_add_request" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_add_donation"
+        android:name="com.example.shareplate.fragments.donor.AddDonationFragment"
+        android:label="Add Donation"
+        tools:layout="@layout/fragment_add_donation" />
+
+    <fragment
+        android:id="@+id/navigation_update_users"
+        android:name="com.example.shareplate.fragments.broker.UpdateUsersFragment"
+        android:label="Update Users"
+        tools:layout="@layout/fragment_update_users" />
+
+    <fragment
+        android:id="@+id/navigation_users"
+        android:name="com.example.shareplate.fragments.broker.UsersFragment"
+        android:label="Users"
+        tools:layout="@layout/fragment_users" >
+        <action
+            android:id="@+id/action_navigation_users_to_navigation_update_users"
+            app:destination="@id/navigation_update_users" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_advice"
+        android:name="com.example.shareplate.fragments.AdviceFragment"
+        android:label="Advice"
+        tools:layout="@layout/fragment_advice" />
+
+    <fragment
+        android:id="@+id/navigation_map"
+        android:name="com.example.shareplate.fragments.MapFragment"
+        android:label="Collection Directions"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_navigation_map_to_navigation_donation"
+            app:destination="@id/navigation_donation" />
+        <action
+            android:id="@+id/action_navigation_map_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.shareplate.fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
